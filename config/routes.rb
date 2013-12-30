@@ -1,9 +1,10 @@
 Ch4App::Application.routes.draw do
- # get "static_pages/Home"
+
+# get "static_pages/Home"
  # get "static_pages/Help"
  # get "static_pages/About"
  # get "static_pages/Contact"
-  get "users/new"
+	resources :users
   root  'static_pages#Home'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/help',    to: 'static_pages#Help',    via: 'get'
